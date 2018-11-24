@@ -12,6 +12,7 @@ class StringTableViewController: UITableViewController {
 
     var items = [String]()
     let URLBASE = "https://www.dit.upm.es/santiago/examen/datos212.json"
+    var imagesCache = [String:UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,16 @@ class StringTableViewController: UITableViewController {
         // Configure the cell...
         let item = items[indexPath.row]
         cell.textLabel?.text = item
-        print(item)
+        // print(item)
+        
+        let imgurl = items[indexPath.row]
+        if let img = imagesCache[imgurl] {
+            cell.imageView?.image = img
+        } else {
+            cell.imageView?.image = UIImage(named: "none")
+            updateImage(imgurl, indexPath: indexPath)
+        }
+        
         
         return cell
     }
@@ -123,8 +133,51 @@ class StringTableViewController: UITableViewController {
         else {
             print("Either casting or serialization failed")
         }
-
+    }
+   
+    // Given an url, it downloads the image and reload the row.
+    func updateImage(_ urlString: String, indexPath: IndexPath){
+        
+        // 1. Get the url and scape it
+        
+        guard let urlScaped = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            print("Bad scaping")
+            return
+        }
+        print(urlScaped)
+        
+        guard let url = URL(string: urlScaped) else {
+            print("Bad Url")
+            return
+        }
+        
+        // 2. Get data
+        
+        DispatchQueue.global().async {
+            guard let data = try? Data(contentsOf: url) else {
+                print("Bad data")
+                return
+            }
+            
+        // 3. Transform into an img
+            
+            if let img = UIImage(data: data){
+                
+        // 4. Store the img in a cache
+                
+                DispatchQueue.main.async {
+                    self.imagesCache[urlString] = img
+                    print(urlString)
+                    
+        // 5. Reload the row
+                    
+                    self.tableView.reloadRows(at: [indexPath], with: .fade)
+                }
+            }
+            
+        }
+        
+        
 
     }
-    
 }
