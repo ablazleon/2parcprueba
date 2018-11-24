@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3AA03E2C21A8BFE00095A56F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA03E2B21A8BFE00095A56F /* AppDelegate.swift */; };
-		3AA03E2E21A8BFE00095A56F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA03E2D21A8BFE00095A56F /* ViewController.swift */; };
 		3AA03E3121A8BFE00095A56F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA03E2F21A8BFE00095A56F /* Main.storyboard */; };
 		3AA03E3321A8BFE00095A56F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA03E3221A8BFE00095A56F /* Assets.xcassets */; };
 		3AA03E3621A8BFE00095A56F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA03E3421A8BFE00095A56F /* LaunchScreen.storyboard */; };
 		3AA03E4121A8BFE00095A56F /* _parcpruebaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA03E4021A8BFE00095A56F /* _parcpruebaTests.swift */; };
 		3AA03E4C21A8BFE00095A56F /* _parcpruebaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA03E4B21A8BFE00095A56F /* _parcpruebaUITests.swift */; };
+		3AA03E5C21A8C0520095A56F /* StringTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA03E5B21A8C0520095A56F /* StringTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		3AA03E2821A8BFE00095A56F /* 2parcprueba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2parcprueba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA03E2B21A8BFE00095A56F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3AA03E2D21A8BFE00095A56F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3AA03E3021A8BFE00095A56F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3AA03E3221A8BFE00095A56F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AA03E3521A8BFE00095A56F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		3AA03E4721A8BFE00095A56F /* 2parcpruebaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 2parcpruebaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA03E4B21A8BFE00095A56F /* _parcpruebaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _parcpruebaUITests.swift; sourceTree = "<group>"; };
 		3AA03E4D21A8BFE00095A56F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AA03E5B21A8C0520095A56F /* StringTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +98,11 @@
 			isa = PBXGroup;
 			children = (
 				3AA03E2B21A8BFE00095A56F /* AppDelegate.swift */,
-				3AA03E2D21A8BFE00095A56F /* ViewController.swift */,
 				3AA03E2F21A8BFE00095A56F /* Main.storyboard */,
 				3AA03E3221A8BFE00095A56F /* Assets.xcassets */,
 				3AA03E3421A8BFE00095A56F /* LaunchScreen.storyboard */,
 				3AA03E3721A8BFE00095A56F /* Info.plist */,
+				3AA03E5B21A8C0520095A56F /* StringTableViewController.swift */,
 			);
 			path = 2parcprueba;
 			sourceTree = "<group>";
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AA03E2E21A8BFE00095A56F /* ViewController.swift in Sources */,
+				3AA03E5C21A8C0520095A56F /* StringTableViewController.swift in Sources */,
 				3AA03E2C21A8BFE00095A56F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
